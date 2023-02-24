@@ -27,11 +27,9 @@
       // console.log(`${myString} ${foods[0]}`);
 
       for (var myFood = 0; myFood < foods.length; myFood++) {
-        var remainder = myFood % 2;
-
-        if (remainder === 0) {
-          var foodUpper = foods[myFood].toUpperCase();
-          console.log(`${myString} ${foodUpper}`);
+        // checking to see if increamentor is even
+        if (myFood % 2 === 0) {
+          console.log(`${myString} ${foods[myFood].toUpperCase()}`);
         } else {
           console.log(`${myString} ${foods[myFood]}`);
         }
