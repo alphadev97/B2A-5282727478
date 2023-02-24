@@ -9,11 +9,48 @@
   <body>
     <h1>Loops in JS</h1>
     <script>
-      var color = ["red", "blue", "yellow", "green", "orange", "purple"];
+      // FOR LOOPS
 
-      for (var i = 0; i < color.length; i++) {
-        console.log(color[i]);
+      // var color = ["red", "blue", "yellow", "green", "orange", "pink"];
+
+      // // for (var i = 0; i < color.length; i++) {
+      // //   console.log(color[i]);
+      // // }
+
+      // for (var eachColor of color) {
+      //   console.log(eachColor);
+      // }
+
+      // var myString = "Here is a string of text!";
+
+      // for (var i = 0; i < myString.length; i++) {
+      //   console.log(myString[i]);
+      // }
+
+      // for (var eachLetter of myString) {
+      //   console.log(eachLetter);
+      // }
+
+      // WHILE LOOPS
+
+      var i = 1;
+      var text = "";
+
+      // while (increamentor < 10) {
+      //   text += "The increamentor has gone up to " + increamentor + "\n";
+      //   increamentor++;
+      // }
+
+      // TEMPLATE LITERALS
+
+      while (i < 11) {
+        text += `The increamentor is ${i}, the incrementor squard is ${
+          i * i
+        } \n`;
+        i++;
       }
+
+      console.log(text);
     </script>
   </body>
 </html>
