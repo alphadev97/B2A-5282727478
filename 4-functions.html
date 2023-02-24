@@ -10,10 +10,77 @@
     <h1>Functions in JavaScript</h1>
 
     <script>
-      var myString = "Here is a string of text";
-      var upperString = myString.toUpperCase();
-      console.log(myString);
-      console.log(upperString);
+      function doStuff() {
+        var myString = "Here is a string of text";
+        var upperString = myString.toUpperCase();
+        console.log(myString);
+        console.log(upperString);
+      }
+
+      // doStuff();
+
+      function checkNum() {
+        var userNum = prompt("Enter a whole number", "");
+
+        if (userNum < 10) {
+          console.log("You entered a number less than 10");
+          for (var i = 0; i < 10; i++) {
+            console.log(`Here is ${i}`);
+          }
+        } else if (userNum > 9) {
+          console.log("You entered a big number");
+        } else {
+          console.log("ERROR: you didn't enter a number!");
+        }
+      }
+
+      // checkNum();
+
+      function upperMessage(message) {
+        var upperMessage = message.toUpperCase();
+        console.log(upperMessage);
+      }
+
+      // upperMessage("Here is a message!");
+
+      function addNums(num1, num2) {
+        var sum = num1 + num2;
+        console.log(sum);
+      }
+
+      //   addNums(329, 420);
+
+      function returnSum(num1, num2) {
+        var sum = num1 + num2;
+        return sum;
+      }
+
+      //   console.log(returnSum(3, 5));
+
+      //   console.log(Math.random());
+
+      var foods = ["cheese", "chicken", "grapes", "humbergers"];
+
+      function randomInt(min, max) {
+        // var numOfValues = max - min + 1;
+        // var randomNum = Math.random();
+        // var randomVal = randomNum * numOfValues;
+        // var roundedRandomVal = Math.floor(randomVal);
+        // var finalNum = min + roundedRandomVal;
+
+        // console.log(finalNum);
+
+        // creating a random integar from min and max.
+
+        return Math.floor((max - min + 1) * Math.random()) + min;
+      }
+
+      //   randomInt(5, 10);
+      console.log(foods[randomInt(0, 3)]);
+
+      //   var greeting = function () {
+      //     console.log("hello from the function!");
+      //   };
     </script>
   </body>
 </html>
