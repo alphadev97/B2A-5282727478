@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Examlples</title>
+    <style>
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Examples</h1>
+    <!-- <p id="one">Here is a paragraph with unique ID</p> -->
+
+    <!-- <p>Here is a paragraph</p>
+    <p>Here is another paragraph</p>
+    <p>Here is one more paragraph</p> -->
+
+    <!-- <p>Here is a paragraph</p>
+    <p>Here is another paragraph</p>
+    <p class="special">Here is one more paragraph</p> -->
+
+    <!-- Query Selector -->
+
+    <!-- <div id="special">
+      <p class="someclass">Here is a paragraph</p>
+      <p>Here is another paragraph</p>
+      <p class="someclass">Here is one more paragraph</p>
+    </div> -->
+
+    <!-- Query Selector All -->
+
+    <!-- <div id="special">
+      <p>Here is a paragraph</p>
+      <p>Here is another paragraph</p>
+      <p>Here is one more paragraph</p>
+    </div> -->
+
+    <!-- Inner HTML -->
+
+    <div id="special">
+      <p>Here is a paragraph</p>
+      <p>Here is another paragraph</p>
+      <p>Here is one more paragraph</p>
+    </div>
+
+    <script>
+      //   document.getElementById("one").style.color = "green";
+
+      //   var ps = document.getElementsByTagName("p");
+      //   for (var i = 0; i < ps.length; i++) {
+      //     ps[i].style.color = "red";
+      //     alert(`showing paragraph ${i}`);
+      //   }
+
+      //   var myClass = document.getElementsByClassName("special");
+
+      //   //   for (var i = 0; i < myClass.length; i++) {
+      //   //     myClass[i].style.color = "red";
+      //   //   }
+
+      //   myClass[0].style.color = "red";
+
+      // Query Selector
+
+      //   var myText = document.querySelector("#special .someclass");
+      //   myText.style.color = "red";
+
+      // Query Selector All
+
+      //   var myText = document.querySelectorAll("#special p");
+
+      //   for (var i = 0; i < myText.length; i++) {
+      //     myText[i].style.color = "red";
+      //   }
+
+      // Inner HTML
+
+      //   var myDiv = document.querySelector("#special");
+      //   myDiv.innerHTML = "<p> Here is my new paragraph </p>";
+
+      //   document.querySelector("#special").innerHTML =
+      //     "<p> Here is my new paragraph </p>";
+
+      // className
+
+      var firstPara = document.querySelector("p");
+      firstPara.className = "blue";
+    </script>
+  </body>
+</html>
