@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h1>JavaScript Events</h1>
+
+    <!-- <button>Don't Press Me!</button>
+
+    <a href="https://www.google.com/">Link to Google</a> -->
+
+    <form method="get">
+      <label>Your Name: <input type="text" name="name" /></label>
+      <input type="submit" />
+    </form>
+
+    <script>
+      //   var btn = document.querySelector("button");
+
+      //   //   btn.onclick = function () {
+      //   //     alert("I told you not to press me!");
+      //   //   };
+
+      //   //   btn.addEventListener("click", ouch);
+
+      //   btn.addEventListener("click", function (event) {
+      //     event.target.style.backgroundColor = "red";
+
+      //     alert("I told you not to press me!");
+      //   });
+
+      //   var link = document.querySelector("a");
+
+      //   link.addEventListener("click", function (event) {
+      //     event.preventDefault();
+      //     alert("Sorry, no google for you!");
+      //   });
+
+      var myForm = document.querySelector("form");
+      myForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var formData = document.querySelector("input").value;
+
+        alert(formData);
+      });
+    </script>
+  </body>
+</html>
