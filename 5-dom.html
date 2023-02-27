@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Examlples</title>
-    <style>
+    <!-- <style>
       .blue {
         color: blue;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <h1>DOM Examples</h1>
@@ -41,10 +41,23 @@
 
     <!-- Inner HTML -->
 
-    <div id="special">
+    <!-- <div id="special">
       <p>Here is a paragraph</p>
       <p>Here is another paragraph</p>
       <p>Here is one more paragraph</p>
+    </div> -->
+
+    <!-- <form>
+      <label><input type="checkbox" /> YES!</label>
+    </form> -->
+
+    <!-- <div>
+      <p>This is the first paragraph on the page.</p>
+    </div> -->
+
+    <div>
+      <p>Here is a paragraph</p>
+      <p>Remove this paragraph</p>
     </div>
 
     <script>
@@ -87,8 +100,28 @@
 
       // className
 
-      var firstPara = document.querySelector("p");
-      firstPara.className = "blue";
+      //   var firstPara = document.querySelector("p");
+      //   firstPara.className = "blue";
+
+      //   setAttribute
+
+      //   var myCheckbox = document.querySelector("input");
+      //   myCheckbox.setAttribute("checked", "checked");
+
+      // Creating elements and text nodes
+
+      //   var myTag = document.createElement("p");
+      //   var myText = document.createTextNode("Here is a new paragraph.");
+
+      //   myTag.appendChild(myText);
+
+      //   var myDiv = document.querySelector("div");
+      //   myDiv.appendChild(myTag);
+
+      // Removing Elements
+
+      var myDiv = document.querySelector("div");
+      myDiv.removeChild(myDiv.children[1]);
     </script>
   </body>
 </html>
