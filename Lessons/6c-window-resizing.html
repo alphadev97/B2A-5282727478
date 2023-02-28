@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Resizing</title>
+  </head>
+  <body>
+    <h1>Resize the window and Watch the console</h1>
+
+    <script>
+      window.addEventListener("resize", function () {
+        console.log(`The window width is ${window.innerWidth}`);
+        console.log(`The window height is ${window.innerHeight}`);
+      });
+    </script>
+  </body>
+</html>
