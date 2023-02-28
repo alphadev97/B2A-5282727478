@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE"
+      >MDN Documentation (IIFE)</a
+    >
+
+    <h1>Testing scope in JavaScript</h1>
+
+    <p>Here is a paragraph</p>
+    <p>Here is another pagraph</p>
+    <p>Here is one more paragraph</p>
+    <script>
+      //   var aVariable = "This is in the global scope";
+
+      //   function testScope() {
+      //     oopsGlobal = "This is accidentally global";
+      //     var aVariable = "This is in the local scope";
+      //     console.log(aVariable);
+      //   }
+
+      //   testScope();
+
+      //   console.log(oopsGlobal);
+
+      // STRATEGY 1 = IIFE
+
+      //   (function () {
+      //     var myPs = document.querySelectorAll("p");
+
+      //     for (var i = 0; i < myPs.length; i++) {
+      //       myPs[i].style.color = "red";
+      //     }
+      //   })();
+
+      //   console.log(myPs);
+
+      //   (function doStuff() {
+      //     var myPs = document.querySelectorAll("p");
+
+      //     for (var i = 0; i < myPs.length; i++) {
+      //       myPs[i].style.color = "red";
+      //     }
+      //   })();
+
+      //   doStuff();
+
+      // STRATEGY 2 = Use Strict
+
+      //   "use strict";
+
+      //   newVar = "Not properly defined";
+
+      //   console.log(newVar);
+
+      // STRATEGY 3 = IIFE with "use strict" (BEST)
+
+      //   (function doStuff() {
+      //     "use strict";
+      //     var myPs = document.querySelectorAll("p");
+
+      //     for (var i = 0; i < myPs.length; i++) {
+      //       myPs[i].style.color = "red";
+      //     }
+      //   })();
+
+      // STRATEGY 4 = const and let
+
+      //   const cheese = "cheese is yummy";
+
+      //   console.log(cheese);
+
+      //   cheese = "cheese is yucky";
+
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+      }
+
+      console.log(`the value of i is ${i}`);
+    </script>
+  </body>
+</html>
