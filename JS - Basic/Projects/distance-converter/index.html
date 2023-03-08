@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miles to Kilometer Converter</title>
+
+    <!--? Normalize CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--? Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--? My Styles -->
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!--? JS File -->
+
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h1>Miles to Kilometer Converter</h1>
+
+    <div class="container top">
+      <p>
+        Type in a number of miles and click the button to convert the distance
+        to kilometers.
+      </p>
+
+      <form action="somephpfile.php" method="post" id="convert">
+        <input
+          type="text"
+          name="distance"
+          id="distance"
+          placeholder="distance"
+        />
+
+        <input type="submit" name="convertdist" value="Convert Distance" />
+      </form>
+    </div>
+
+    <div class="container bottom" id="answer">
+      <h2 class="invisible">Answer goes here</h2>
+    </div>
+
+    <p id="direction">
+      Press the "K" key to switch to kilometer conversion, press the "M" key to
+      switch to mile conversion
+    </p>
+  </body>
+</html>

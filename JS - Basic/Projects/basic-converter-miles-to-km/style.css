@@ -1,0 +1,62 @@
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: "PT Sans", sans-serif;
+  padding: 50px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 130%;
+}
+
+.invisible {
+  color: #aabccc;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.top {
+  background: #ebf6be;
+}
+
+.bottom {
+  background: #aabccc;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+input {
+  padding: 10px 10px 10px 10px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+#distance {
+  background: white;
+}
