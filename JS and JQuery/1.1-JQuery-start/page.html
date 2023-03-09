@@ -6,5 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Example Page</title>
   </head>
-  <body></body>
+  <body>
+    <div id="page">
+      <header>
+        <h1>Title of the page</h1>
+        <h2>Subtitle of the page</h2>
+      </header>
+
+      <nav id="sidebar">
+        <ul>
+          <li class="special">
+            <a href="#">Link one</a>
+
+            <ul class="sebmenu">
+              <li><a href="#">Sublink one</a></li>
+              <li><a href="#">Sublink two</a></li>
+              <li><a href="#">Sublink three</a></li>
+              <li><a href="#">Sublink four</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Link two</a></li>
+          <li><a href="#">Link three</a></li>
+          <li><a href="#">Link four</a></li>
+        </ul>
+      </nav>
+
+      <section id="main">
+        <h2>Section Title One</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, blandit
+          eros est aptent cursus nec donec auctor duis, curabitur cum dui
+          himenaeos conubia sociosqu rhoncus. Vehicula tortor turpis massa
+          dictumst tempus cum maecenas euismod, luctus placerat pretium enim
+          cras ut odio, himenaeos nunc ridiculus iaculis suspendisse erat
+          conubia.
+        </p>
+
+        <h2>Section Title Two</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit nunc, blandit
+          eros est aptent cursus nec donec auctor duis, curabitur cum dui
+          himenaeos conubia sociosqu rhoncus. Vehicula tortor turpis massa
+          dictumst tempus cum maecenas euismod, luctus placerat pretium enim
+          cras ut odio, himenaeos nunc ridiculus iaculis suspendisse erat
+          conubia.
+
+          <ol>
+            <li>Item Number One</li>
+            <li class="special">Item Number Two</li>
+            <li>Item Number Three</li>
+            <li class="special">Item Number Four</li>
+          </ol>
+        </p>
+      </section>
+    </div>
+
+
+    <!-- jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+
+      // jQuery Selectors Example
+
+      // $("#main").css('border', '2px solid red');
+
+      // $('.special').css('border', '2px solid red');
+
+      // $('#main h2').css('border', '2px solid red');
+
+      // $('h2, p').css('border', '2px solid red');
+
+      // $('ol li').even().css('border', '2px solid red');
+
+      // $('#main p').first().css('border', '2px solid red');
+
+      // $('li:has(ul)').css('border', '2px solid red');
+
+      // $('li:contains(three)').css('border', '2px solid red');
+
+
+      // $('a').click(function(){
+      //   console.log($(this).html());
+      // });
+
+      $('a').click(function(){
+        console.log(this.innerHTML);
+      });
+    </script>
+  </body>
 </html>
