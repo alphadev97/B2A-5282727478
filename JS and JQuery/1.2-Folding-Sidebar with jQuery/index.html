@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Example</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS LINK -->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Mewo!</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit mauris, nulla
+          vivamus nostra sociis gravida dapibus arcu posuere habitasse, feugiat
+          parturient turpis potenti mattis metus tristique. Pulvinar gravida
+          accumsan luctus mi ligula quis nostra pharetra, curae augue
+          ullamcorper dui volutpat senectus fusce inceptos, vel libero sem
+          venenatis eros proin mauris. Fusce habitasse arcu faucibus risus
+          accumsan, posuere velit habitant purus vulputate morbi, curae magnis
+          taciti primis. Lorem ipsum dolor sit amet consectetur adipiscing elit
+          mauris, nulla vivamus nostra sociis gravida dapibus arcu posuere
+          habitasse, feugiat parturient turpis potenti mattis metus tristique.
+          Pulvinar gravida accumsan luctus mi ligula quis nostra pharetra, curae
+          augue ullamcorper dui volutpat senectus fusce inceptos.
+        </p>
+        <p>
+          vel libero sem venenatis eros proin mauris. Fusce habitasse arcu
+          faucibus risus accumsan, posuere velit habitant purus vulputate morbi,
+          curae magnis taciti primis. Lorem ipsum dolor sit amet consectetur
+          adipiscing elit mauris, nulla vivamus nostra sociis gravida dapibus
+          arcu posuere habitasse, feugiat parturient turpis potenti mattis metus
+          tristique. Pulvinar gravida accumsan luctus mi ligula quis nostra
+          pharetra, curae augue ullamcorper dui volutpat senectus fusce
+          inceptos, vel libero sem venenatis eros proin mauris. Fusce habitasse
+          arcu faucibus risus accumsan, posuere velit habitant purus vulputate
+          morbi, curae magnis taciti primis.
+        </p>
+      </article>
+
+      <aside>
+        <h2>Navigation</h2>
+        <ul>
+          <li>
+            <a href="#" class="menulink">Menu 1</a>
+
+            <ul>
+              <li><a href="#">Menu 1A</a></li>
+              <li><a href="#">Menu 1B</a></li>
+              <li><a href="#">Menu 1C</a></li>
+              <li><a href="#">Menu 1D</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="menulink">Menu 2</a>
+            <ul>
+              <li><a href="#">Menu 2A</a></li>
+              <li><a href="#">Menu 2B</a></li>
+              <li><a href="#">Menu 2C</a></li>
+              <li><a href="#">Menu 2D</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="menulink">Menu 3</a>
+            <ul>
+              <li><a href="#">Menu 3A</a></li>
+              <li><a href="#">Menu 3B</a></li>
+              <li><a href="#">Menu 3C</a></li>
+              <li><a href="#">Menu 3D</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="menulink">Menu 4</a>
+            <ul>
+              <li><a href="#">Menu 4A</a></li>
+              <li><a href="#">Menu 4B</a></li>
+              <li><a href="#">Menu 4C</a></li>
+              <li><a href="#">Menu 4D</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- JQUERY LINK -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      $("ul li ul").css("display", "none");
+    </script>
+  </body>
+</html>
