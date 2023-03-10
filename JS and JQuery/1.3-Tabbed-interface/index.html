@@ -44,35 +44,53 @@
 
       <div id="tabs-2">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipiscing elit aenean non sed
-          ac, curabitur orci hendrerit maecenas. Taciti tellus a porttitor morbi
-          nullam laoreet volutpat facilisis at habitant commodo potenti mauris,
-          interdum id orci curabitur non dignissim scelerisque
+          Cum montes luctus varius vestibulum morbi suspendisse aliquam
+          parturient, tempus mattis fames volutpat mauris tortor commodo,
+          lacinia augue turpis eget ridiculus non donec. Vulputate eget rutrum
+          cras augue vehicula accumsan montes, ad luctus nulla hac risus id
+          sodales morbi
         </p>
         <p>
-          mi dictumst congue habitasse imperdiet. Gravida mollis vehicula
-          placerat massa libero potenti primis cum, dapibus porta nostra conubia
-          vitae class sagittis, magnis venenatis viverra mattis malesuada augue
-          accumsan.
+          mauris vestibulum faucibus condimentum nisl tortor semper, id congue
+          risus venenatis eleifend. Imperdiet nibh taciti suscipit netus
+          curabitur quis etiam, ad cursus fames mus euismod porta, pharetra
+          dapibus ut platea consequat habitant.
         </p>
       </div>
 
       <div id="tabs-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipiscing elit aenean non sed
-          ac, curabitur orci hendrerit maecenas. Taciti tellus a porttitor morbi
-          nullam laoreet volutpat facilisis at habitant commodo potenti mauris,
-          interdum id orci curabitur non dignissim scelerisque
+          unc habitasse facilisi primis cubilia nisl mus scelerisque magnis
+          viverra parturient, sollicitudin taciti aptent nascetur maecenas
+          pulvinar aliquam pellentesque in, tellus arcu mi vitae nisi suscipit
+          egestas dui sed. Eu est taciti penatibus rhoncus inceptos erat orci
+          enim cubilia venenatis nulla id consequat parturient ad, primis proin
+          torquent scelerisque
         </p>
         <p>
-          mi dictumst congue habitasse imperdiet. Gravida mollis vehicula
-          placerat massa libero potenti primis cum, dapibus porta nostra conubia
-          vitae class sagittis, magnis venenatis viverra mattis malesuada augue
-          accumsan.
+          sapien dignissim cursus magnis justo tortor diam nibh. Mollis dictumst
+          interdum class porta nec massa sagittis habitant felis turpis, dui
+          faucibus nullam hendrerit purus aptent tempus tellus maecenas.
         </p>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      $("#tabs > ul > li > a").click(function () {
+        $("#tabs > ul > li > a").css({
+          background: "#a2a2a2",
+          color: "#cecece",
+        });
+        $(this).css({ background: "#eaeaea", color: "#333" });
+
+        const thisTab = $(this).attr("href");
+        // alert(thisTab);
+        $("#tabs > div:visible").fadeOut(200, function () {
+          $(thisTab).fadeIn(200);
+        });
+      });
+    </script>
   </body>
 </html>
