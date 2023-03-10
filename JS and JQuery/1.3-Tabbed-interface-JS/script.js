@@ -3,16 +3,16 @@
 
   const tabs = document.querySelectorAll("#tabs > ul > li > a");
 
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click", selectTab);
-  }
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", selectTab);
+  });
 
   function selectTab(event) {
     event.preventDefault();
 
-    for (let i = 0; i < tabs.length; i++) {
-      tabs[i].removeAttribute("class");
-    }
+    tabs.forEach((tab) => {
+      tab.removeAttribute("class");
+    });
 
     event.target.className = "active";
 
