@@ -22,12 +22,12 @@
   <body>
     <div id="tabs">
       <ul>
-        <li><a href="#tabs-1">Cupvakes</a></li>
+        <li><a href="#tabs-1" class="active">Cupvakes</a></li>
         <li><a href="#tabs-2">Brownies</a></li>
         <li><a href="#tabs-3">Cotton Candy</a></li>
       </ul>
 
-      <div id="tabs-1">
+      <div id="tabs-1" class="visible">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipiscing elit aenean non sed
           ac, curabitur orci hendrerit maecenas. Taciti tellus a porttitor morbi
@@ -42,7 +42,7 @@
         </p>
       </div>
 
-      <div id="tabs-2">
+      <div id="tabs-2" class="hidden">
         <p>
           Cum montes luctus varius vestibulum morbi suspendisse aliquam
           parturient, tempus mattis fames volutpat mauris tortor commodo,
@@ -58,7 +58,7 @@
         </p>
       </div>
 
-      <div id="tabs-3">
+      <div id="tabs-3" class="hidden">
         <p>
           unc habitasse facilisi primis cubilia nisl mus scelerisque magnis
           viverra parturient, sollicitudin taciti aptent nascetur maecenas
@@ -74,23 +74,5 @@
         </p>
       </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-    <script>
-      $("#tabs > ul > li > a").click(function () {
-        $("#tabs > ul > li > a").css({
-          background: "#a2a2a2",
-          color: "#cecece",
-        });
-        $(this).css({ background: "#eaeaea", color: "#333" });
-
-        const thisTab = $(this).attr("href");
-        // alert(thisTab);
-        $("#tabs > div:visible").fadeOut(200, function () {
-          $(thisTab).fadeIn(200);
-        });
-      });
-    </script>
   </body>
 </html>
