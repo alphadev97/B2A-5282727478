@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 2</title>
+  </head>
+  <body>
+    <p>Don't change this paragraph</p>
+
+    <div id="main">
+      <p>Change this paragraph</p>
+      <p>Change this paragraph too</p>
+      <p>And change this last paragraph</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      // My Method of vanilla Javascript
+
+      //   document.getElementById("main").style.fontSize = "24px";
+      //   document.getElementById("main").style.color = "red";
+
+      //   Answer of PDF
+
+      //   var parasToChange = document.querySelectorAll("#main p");
+
+      //   for (i = 0; i < parasToChange.length; i++) {
+      //     parasToChange[i].style.fontSize = "24px";
+      //     parasToChange[i].style.color = "red";
+      //   }
+
+      // My method of jQuery
+
+      //   $("#main").css("font-size", "24px");
+      //   $("#main").css("color", "red");
+
+      //   Answer of PDF
+
+      $("#main").css("font-size", "24px").css("color", "red");
+    </script>
+  </body>
+</html>

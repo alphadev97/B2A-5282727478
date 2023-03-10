@@ -9,14 +9,16 @@
   <body>
     <p id="paragraph">Here is a paragraph</p>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <script>
       // WITH VANILLA JAVASCRIPT
 
-      //   document.getElementById("paragraph").style.fontSize = "24px";
+      // document.getElementById("paragraph").style.fontSize = "24px";
 
       // WITH JQUERY
 
-      document.querySelector("#paragraph").style.fontSize = "24px";
+      $("#paragraph").css("font-size", "24px");
     </script>
   </body>
 </html>
