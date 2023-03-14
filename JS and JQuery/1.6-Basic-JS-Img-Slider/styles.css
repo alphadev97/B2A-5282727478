@@ -20,7 +20,7 @@ li {
 }
 
 #slider-wrapper ul {
-  width: 5000px;
+  /* width: 5000px; */
   overflow: hidden;
   position: absolute;
   top: 0;
