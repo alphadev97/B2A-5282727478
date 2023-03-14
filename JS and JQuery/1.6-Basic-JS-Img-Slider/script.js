@@ -19,6 +19,8 @@ window.addEventListener("load", function () {
 
   slider.style.width = totalWidth;
 
+  // NEXT BUTTON SLIDER
+
   next.addEventListener("click", function (evt) {
     evt.preventDefault();
 
@@ -26,9 +28,22 @@ window.addEventListener("load", function () {
 
     if (counter === slideCount) {
       counter = 0;
-      leftPosition = 0;
-      slider.style.left = leftPosition;
-    } else {
     }
+    leftPosition = `-${counter * slideWidth}px`;
+    slider.style.left = leftPosition;
+  });
+
+  // PREVIOUS BUTTON SLIDER
+
+  previous.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    counter--;
+
+    if (counter < 0) {
+      counter = slideCount - 1;
+    }
+    leftPosition = `-${counter * slideWidth}px`;
+    slider.style.left = leftPosition;
   });
 });
