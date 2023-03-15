@@ -169,6 +169,12 @@ footer p {
   .column {
     flex: 1;
   }
+
+  .cta {
+    width: 20vw;
+    height: 20vw;
+    font-size: 3vw;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -179,5 +185,11 @@ footer p {
 
   header h1 {
     font-size: 120px;
+  }
+
+  .cta {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
   }
 }
