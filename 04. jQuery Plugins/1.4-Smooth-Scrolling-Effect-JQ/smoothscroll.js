@@ -31,7 +31,7 @@ $(window).on("load", function () {
 
   resetPagePosition();
 
-  console.log(postTop);
+  // console.log(postTop);
 
   $(window).scroll(function () {
     pageTop = $(window).scrollTop() + 210;
