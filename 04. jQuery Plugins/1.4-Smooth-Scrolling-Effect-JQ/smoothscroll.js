@@ -8,15 +8,11 @@ $("nav ul li a").click(function () {
       {
         scrollTop: $(thisSection).offset().top - 200,
       },
-      400,
-      "easeOutCirc",
-      function () {
-        $("nav ul li a").removeAttr("class");
-        thisLink.addClass("selected");
-
-        // alert($(window).scrollTop());
-      }
+      800,
+      "easeOutCirc"
     );
+
+  return false;
 });
 
 $(window).on("load", function () {
