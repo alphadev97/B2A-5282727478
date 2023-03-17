@@ -14,3 +14,20 @@ function smoothScroll(event) {
   window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
   console.log(originalTop);
 }
+
+window.addEventListener("load", function () {
+  const posts = document.querySelectorAll("section");
+  let postTops = [];
+  let pagetop;
+  let counter = 1;
+  let prevCounter = 1;
+  let doneResizing;
+
+  posts.forEach(function (post) {
+    postTops.push(
+      Math.floor(post.getBoundingClientRect().top + window.pageXOffset)
+    );
+  });
+
+  console.log(postTops);
+});
