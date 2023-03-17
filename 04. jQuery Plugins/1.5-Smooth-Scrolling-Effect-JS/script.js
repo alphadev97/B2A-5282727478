@@ -25,9 +25,22 @@ window.addEventListener("load", function () {
 
   posts.forEach(function (post) {
     postTops.push(
-      Math.floor(post.getBoundingClientRect().top + window.pageXOffset)
+      Math.floor(post.getBoundingClientRect().top + window.pageYOffset)
     );
   });
 
-  console.log(postTops);
+  // console.log(postTops);
+
+  window.addEventListener("scroll", function () {
+    pagetop = window.pageYOffset;
+    console.log(pagetop) + 250;
+
+    if (pagetop > postTops[counter]) {
+      counter++;
+      console.log(`Scrolling down ${counter}`);
+    } else if (counter > 1 && pagetop < postTops[counter - 1]) {
+      counter--;
+      console.log(`Scrolling up ${counter}`);
+    }
+  });
 });
