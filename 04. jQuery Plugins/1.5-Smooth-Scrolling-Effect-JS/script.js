@@ -12,7 +12,7 @@ function smoothScroll(event) {
   const originalTop =
     Math.floor(targetSection.getBoundingClientRect().top) - 200;
   window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
-  console.log(originalTop);
+  // console.log(originalTop);
 }
 
 window.addEventListener("load", function () {
@@ -32,15 +32,55 @@ window.addEventListener("load", function () {
   // console.log(postTops);
 
   window.addEventListener("scroll", function () {
-    pagetop = window.pageYOffset;
-    console.log(pagetop) + 250;
+    pagetop = window.pageYOffset + 250;
+    // console.log(pagetop) + 250;
 
     if (pagetop > postTops[counter]) {
       counter++;
-      console.log(`Scrolling down ${counter}`);
+      // console.log(`Scrolling down ${counter}`);
     } else if (counter > 1 && pagetop < postTops[counter - 1]) {
       counter--;
-      console.log(`Scrolling up ${counter}`);
+      // console.log(`Scrolling up ${counter}`);
+    }
+
+    if (counter != prevCounter) {
+      navLinks.forEach(function (eachLink) {
+        eachLink.removeAttribute("class");
+      });
+
+      const thisLink = document.querySelector(
+        `nav ul li:nth-child(${counter}) a`
+      );
+      thisLink.className = "selected";
+
+      prevCounter = counter;
     }
   });
+
+  window.addEventListener("resize", function () {
+    clearTimeout(doneResizing);
+
+    doneResizing = setTimeout(function () {
+      resetPagePosition();
+    }, 500);
+  });
+
+  function resetPagePosition() {
+    postTops = [];
+
+    posts.forEach(function (post) {
+      postTops.push(
+        Math.floor(post.getBoundingClientRect().top + window.pageYOffset)
+      );
+    });
+
+    const pagePosition = window.pageYOffset + 250;
+    counter = 0;
+
+    postTops.forEach(function (post) {
+      if (pagePosition > post) {
+        counter++;
+      }
+    });
+  }
 });
