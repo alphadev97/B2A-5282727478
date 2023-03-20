@@ -23,11 +23,7 @@ window.addEventListener("load", function () {
   let prevCounter = 1;
   let doneResizing;
 
-  posts.forEach(function (post) {
-    postTops.push(
-      Math.floor(post.getBoundingClientRect().top + window.pageYOffset)
-    );
-  });
+  resetPagePosition();
 
   // console.log(postTops);
 
@@ -82,5 +78,14 @@ window.addEventListener("load", function () {
         counter++;
       }
     });
+
+    navLinks.forEach(function (eachLink) {
+      eachLink.removeAttribute("class");
+    });
+
+    const thisLink = document.querySelector(
+      `nav ul li:nth-child(${counter}) a`
+    );
+    thisLink.className = "selected";
   }
 });
