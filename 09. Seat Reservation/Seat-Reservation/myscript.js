@@ -96,6 +96,9 @@ makeRows(9, 15, "middle");
 (function () {
   "use strict";
 
+  let selectSeats = [];
+  const seats = document.querySelectorAll(".a");
+
   for (const key in reservedSeats) {
     if (reservedSeats.hasOwnProperty(key)) {
       const obj = reservedSeats[key];
@@ -105,11 +108,8 @@ makeRows(9, 15, "middle");
     }
   }
 
-  var selectSeats = [];
-  var seats = document.querySelectorAll(".a");
-
-  seats.forEach(function (seat) {
-    seat.addEventListener("click", function () {
+  seats.forEach((seat) => {
+    seat.addEventListener("click", () => {
       seatSelectionProcess(seat.id);
     });
   });
@@ -129,14 +129,12 @@ makeRows(9, 15, "middle");
     }
   }
 
-  document
-    .getElementById("reserve")
-    .addEventListener("click", function (event) {
-      event.preventDefault();
-      document.getElementById("resform").style.display = "block";
-    });
+  document.getElementById("reserve").addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById("resform").style.display = "block";
+  });
 
-  document.getElementById("cancel").addEventListener("click", function (event) {
+  document.getElementById("cancel").addEventListener("click", (event) => {
     event.preventDefault();
     document.getElementById("resform").style.display = "none";
   });
@@ -162,19 +160,17 @@ makeRows(9, 15, "middle");
       document.getElementById("selectedseats").innerHTML =
         'You need to select some seats to reserve. <br> <a href="#" id="error">Close<a> this dialog box and pick at least one seat';
 
-      document.getElementById("error").addEventListener("click", function () {
+      document.getElementById("error").addEventListener("click", () => {
         document.getElementById("resform").style.display = "none";
       });
     }
   }
   manageConfirmForm();
 
-  document
-    .getElementById("confirmres")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      processReservation();
-    });
+  document.getElementById("confirmres").addEventListener("submit", (event) => {
+    event.preventDefault();
+    processReservation();
+  });
 
   function processReservation() {
     const hardCodeRecords = Object.keys(reservedSeats).length;
@@ -183,7 +179,7 @@ makeRows(9, 15, "middle");
     let counter = 1;
     let nextRecord = "";
 
-    selectSeats.forEach(function (thisSeat) {
+    selectSeats.forEach((thisSeat) => {
       document.getElementById(thisSeat).className = "r";
       document.getElementById(thisSeat).innerHTML = "R";
 
