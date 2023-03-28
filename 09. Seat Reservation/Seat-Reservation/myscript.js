@@ -104,10 +104,6 @@ makeRows(9, 15, "middle");
       document.getElementById(obj.seat).innerHTML = "R";
     }
   }
-})();
-
-(function () {
-  "use strict";
 
   var selectSeats = [];
   var seats = document.querySelectorAll(".a");
@@ -119,16 +115,18 @@ makeRows(9, 15, "middle");
   });
 
   function seatSelectionProcess(thisSeat) {
-    var index = selectSeats.indexOf(thisSeat);
-    if (index > -1) {
-      selectSeats.splice(index, 1);
-      document.getElementById(thisSeat).className = "a";
-    } else {
-      selectSeats.push(thisSeat);
-      document.getElementById(thisSeat).className = "s";
+    if (!document.getElementById(thisSeat).classList.contains("r")) {
+      var index = selectSeats.indexOf(thisSeat);
+      if (index > -1) {
+        selectSeats.splice(index, 1);
+        document.getElementById(thisSeat).className = "a";
+      } else {
+        selectSeats.push(thisSeat);
+        document.getElementById(thisSeat).className = "s";
+      }
+      manageConfirmForm();
+      console.log(selectSeats);
     }
-    manageConfirmForm();
-    console.log(selectSeats);
   }
 
   document
@@ -147,13 +145,18 @@ makeRows(9, 15, "middle");
     if (selectSeats.length > 0) {
       document.getElementById("confirmres").style.display = "block";
 
-      let seatString = selectSeats.toString();
-      seatString = seatString.replace(/,/g, ", ");
-      seatString = seatString.replace(/,(?=[^,]*$)/, " and");
-
-      document.getElementById(
-        "selectedseats"
-      ).innerHTML = `You have selected some ${seatString}`;
+      if (selectSeats.length === 1) {
+        document.getElementById(
+          "selectedseats"
+        ).innerHTML = `You have selected seat ${selectSeats[0]}`;
+      } else {
+        let seatString = selectSeats.toString();
+        seatString = seatString.replace(/,/g, ", ");
+        seatString = seatString.replace(/,(?=[^,]*$)/, " and");
+        document.getElementById(
+          "selectedseats"
+        ).innerHTML = `You have selected seats ${seatString}`;
+      }
     } else {
       document.getElementById("confirmres").style.display = "none";
       document.getElementById("selectedseats").innerHTML =
@@ -165,4 +168,40 @@ makeRows(9, 15, "middle");
     }
   }
   manageConfirmForm();
+
+  document
+    .getElementById("confirmres")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      processReservation();
+    });
+
+  function processReservation() {
+    const hardCodeRecords = Object.keys(reservedSeats).length;
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    let counter = 1;
+    let nextRecord = "";
+
+    selectSeats.forEach(function (thisSeat) {
+      document.getElementById(thisSeat).className = "r";
+      document.getElementById(thisSeat).innerHTML = "R";
+
+      nextRecord = `rocord${hardCodeRecords + counter}`;
+      reservedSeats[nextRecord] = {
+        seat: thisSeat,
+        owner: {
+          fname: fname,
+          lname: lname,
+        },
+      };
+      counter++;
+    });
+    //  Clean up
+    document.getElementById("resform").style.display = "none";
+    selectSeats = [];
+    manageConfirmForm();
+
+    console.log(reservedSeats);
+  }
 })();
