@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h1>Arrow Function</h1>
+
+    <script>
+      const makeUpperCase = (aString) => aString.toUpperCase();
+
+      console.log(makeUpperCase("here is a string"));
+
+      //   Example with two parameters
+
+      const fullName = (fname, lname) => `${fname} ${lname}`;
+
+      console.log(fullName("Muhammad", "Usama"));
+
+      //   Example with no parameters & more than a return statement
+
+      const fulName = () => {
+        const firstName = "Muhammad";
+        const lastName = "Usama";
+        return `${firstName} ${lastName}`;
+      };
+
+      console.log(fulName());
+
+      //   Another example
+
+      const fruit = ["Apple", "Banana", "Mango", "Strawberry", "Lemon"];
+      const upperFruit = [];
+
+      fruit.forEach((thisFruit) => {
+        upperFruit.push(thisFruit.toUpperCase());
+      });
+
+      console.log(upperFruit);
+
+      //   Constructor function example
+
+      const Employee = function (fname, lname, jobTitle) {
+        this.fname = fname;
+        this.lname = lname;
+        this.position = jobTitle;
+        this.fullName = () => `${fname} ${lname}`;
+      };
+
+      const id1234 = new Employee("Muhammad", "Usama", "Web Developer");
+
+      console.log(id1234.fname);
+      console.log(id1234.fullName());
+    </script>
+  </body>
+</html>
