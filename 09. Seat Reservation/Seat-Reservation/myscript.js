@@ -144,10 +144,24 @@ makeRows(9, 15, "middle");
   });
 
   function manageConfirmForm() {
-    if (selectSeats > 0) {
+    if (selectSeats.length > 0) {
       document.getElementById("confirmres").style.display = "block";
+
+      let seatString = selectSeats.toString();
+      seatString = seatString.replace(/,/g, ", ");
+      seatString = seatString.replace(/,(?=[^,]*$)/, " and");
+
+      document.getElementById(
+        "selectedseats"
+      ).innerHTML = `You have selected some ${seatString}`;
     } else {
       document.getElementById("confirmres").style.display = "none";
+      document.getElementById("selectedseats").innerHTML =
+        'You need to select some seats to reserve. <br> <a href="#" id="error">Close<a> this dialog box and pick at least one seat';
+
+      document.getElementById("error").addEventListener("click", function () {
+        document.getElementById("resform").style.display = "none";
+      });
     }
   }
   manageConfirmForm();
