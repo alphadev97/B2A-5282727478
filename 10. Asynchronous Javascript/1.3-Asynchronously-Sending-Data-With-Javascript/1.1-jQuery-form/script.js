@@ -1,4 +1,7 @@
 // add script here
+var formDataURL =
+  "https://cpe-web-assignments.ucdavis.edu/formprocessing/processor.php";
+$("#formdata").load(formDataURL);
 
 $.fn.clearForm = function () {
   return this.each(function () {
