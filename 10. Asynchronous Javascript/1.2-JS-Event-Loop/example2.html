@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Example 2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Event Example 2</h1>
     <script>
-        // JS here
+      // JS here
+      function mkUpperCase(message) {
+        var upper = message.toUpperCase();
+        return upper;
+      }
+      function mkLowerCase(message) {
+        var lower = message.toLowerCase();
+        return lower;
+      }
+      function outputMessages(message) {
+        var output = `Uppercase version: ${mkUpperCase(message)}\n`;
+        output += `Lowercase version: ${mkLowerCase(message)}`;
+        console.log(output);
+      }
+      outputMessages("Llamas are THE best!");
     </script>
-</body>
-
+  </body>
 </html>

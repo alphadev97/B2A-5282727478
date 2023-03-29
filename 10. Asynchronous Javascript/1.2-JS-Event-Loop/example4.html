@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Example 4</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Event Example 4</h1>
     <script>
-        // JS here
+      // JS here
+      console.log("do this first");
+      setTimeout(function () {
+        var second = "do this second";
+        for (var eachLetter of second) {
+          console.log(eachLetter);
+        }
+      }, 0);
+      console.log("do this third");
     </script>
-</body>
-
+  </body>
 </html>
