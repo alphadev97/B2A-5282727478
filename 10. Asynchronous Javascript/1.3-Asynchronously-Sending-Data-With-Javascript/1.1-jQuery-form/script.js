@@ -3,6 +3,26 @@ var formDataURL =
   "https://cpe-web-assignments.ucdavis.edu/formprocessing/processor.php";
 $("#formdata").load(formDataURL);
 
+$("#myForm").validate();
+
+$("#myForm").submit(function (event) {
+  event.preventDefault();
+
+  if ($("#myForm").valid() == true) {
+    var dataString = $(this).serialize();
+    // console.log(dataString);
+    $.ajax({
+      type: "POST",
+      url: formDataURL,
+      data: dataString,
+      success: function (data) {
+        $("#formdata").html(data);
+        $("#myForm").clearForm();
+      },
+    });
+  }
+});
+
 $.fn.clearForm = function () {
   return this.each(function () {
     var type = this.type;
